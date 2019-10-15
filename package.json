@@ -1,8 +1,12 @@
 {
   "name": "bootcamp-start-backend-gobarber",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/server.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
