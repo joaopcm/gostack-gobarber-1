@@ -1,0 +1,159 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2019-10-15T03:53:46.571Z",
+  "__export_source": "insomnia.desktop.app:v7.0.1",
+  "resources": [
+    {
+      "_id": "req_807512b25dc0484aad8ee5a96e6a9de9",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"raphae@gmail.com\",\n\t\"password\": \"raphael1234\"\n}"
+      },
+      "created": 1571109086685,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_e1c18b41b4c4414487eaaca611d5fd4e",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1571108936794.375,
+      "method": "POST",
+      "modified": 1571111527408,
+      "name": "Create",
+      "parameters": [],
+      "parentId": "fld_b90304b04760423d99e10a1295ced846",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/sessions",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b90304b04760423d99e10a1295ced846",
+      "created": 1571109084100,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1571109084100,
+      "modified": 1571109084100,
+      "name": "Sessions",
+      "parentId": "wrk_e24e1d70b26c4d8291f87ea798deb1d3",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_e24e1d70b26c4d8291f87ea798deb1d3",
+      "created": 1571106716350,
+      "description": "",
+      "modified": 1571106716350,
+      "name": "Bootcamp Start GoBarber",
+      "parentId": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_76d8465d36e042d7bd8b24ea84a7d756",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Raphael\",\n\t\"email\": \"raphael@gmail.com\",\n\t\"password\": \"raphael\"\n}"
+      },
+      "created": 1571106775729,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_e1c18b41b4c4414487eaaca611d5fd4e",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1571106775729,
+      "method": "POST",
+      "modified": 1571111189954,
+      "name": "Create",
+      "parameters": [],
+      "parentId": "fld_fd261b4fa66245cd9f7ff08745b7d060",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_fd261b4fa66245cd9f7ff08745b7d060",
+      "created": 1571106727209,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1571106727210,
+      "modified": 1571106727209,
+      "name": "Users",
+      "parentId": "wrk_e24e1d70b26c4d8291f87ea798deb1d3",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b11e92ed116647668a52dc672dbbb92b",
+      "authentication": { "token": "{{ token  }}", "type": "bearer" },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Raphael2\",\n\t\"email\": \"raphae@gmail.com\",\n\t\"oldPassword\": \"raphael1234\",\n\t\"password\": \"raphael\",\n\t\"confirmPassword\": \"raphael\"\n}"
+      },
+      "created": 1571109531664,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_e1c18b41b4c4414487eaaca611d5fd4e",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1571106775679,
+      "method": "PUT",
+      "modified": 1571111430527,
+      "name": "Update",
+      "parameters": [],
+      "parentId": "fld_fd261b4fa66245cd9f7ff08745b7d060",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "env_46453e276d1cfaec65dd1b7b06d9f0494d798911",
+      "color": null,
+      "created": 1571106716359,
+      "data": {
+        "base_url": "http://localhost:3333",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiaWF0IjoxNTcxMTEwMTc3LCJleHAiOjE1NzE3MTQ5Nzd9.3HRwIWDiKdNii3thOFuXddET0l17K0bIh4vL8Xbi_VA"
+      },
+      "dataPropertyOrder": { "&": ["base_url", "token"] },
+      "isPrivate": false,
+      "metaSortKey": 1571106716359,
+      "modified": 1571110184955,
+      "name": "Base Environment",
+      "parentId": "wrk_e24e1d70b26c4d8291f87ea798deb1d3",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_46453e276d1cfaec65dd1b7b06d9f0494d798911",
+      "cookies": [],
+      "created": 1571106716362,
+      "modified": 1571106716362,
+      "name": "Default Jar",
+      "parentId": "wrk_e24e1d70b26c4d8291f87ea798deb1d3",
+      "_type": "cookie_jar"
+    }
+  ]
+}
