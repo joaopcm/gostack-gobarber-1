@@ -1,7 +1,7 @@
 import Notification from '../schemas/Notification';
 import User from '../models/User';
 
-class FileController {
+class NotificationController {
   async index(request, response) {
     const checkIsProvider = await User.findOne({
       where: {
@@ -35,4 +35,4 @@ class FileController {
   }
 }
 
-export default new FileController();
+export default new NotificationController();
