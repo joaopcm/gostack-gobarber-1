@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import User from '../models/User';
+import File from '../models/File';
 
 class UserController {
   async store(request, response) {
@@ -63,9 +64,15 @@ class UserController {
       response.status(400).json({ error: 'Invalid password' });
     }
 
-    const { id, name, provider } = await user.update(request.body);
+    await user.update(request.body);
 
-    return response.json({ id, name, email, provider });
+    const { id, name, provider, avatar } = await User.findByPk(request.userId, {
+      include: [
+        { model: File, as: 'avatar', attributes: ['id', 'path', 'url'] },
+      ],
+    });
+
+    return response.json({ id, name, email, provider, avatar });
   }
 }
 
